@@ -1,0 +1,24 @@
+{
+  "name": "consultant-helper",
+  "version": "1.0.0",
+  "description": "This is the best motherfucking helper for mother",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "create-react-app my-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morxl16/consultant-helper.git"
+  },
+  "keywords": [],
+  "author": "Mor Levy and Omer Saar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morxl16/consultant-helper/issues"
+  },
+  "homepage": "https://github.com/morxl16/consultant-helper#readme",
+  "devDependencies": {
+    "create-react-app": "^1.4.0"
+  }
+}
