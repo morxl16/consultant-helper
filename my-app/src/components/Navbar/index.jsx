@@ -1,40 +1,17 @@
 import React from 'react';
+import {NavLink, Link} from 'react-router-dom';
+import './navbar.css';
 
 const Navbar = (props) => {
   return (
-    <div className="tabs is-right">
+    <div className="tabs">
       <ul>
-        <li className="is-active"><a>הכנסת תלמידים</a></li>
-        <li><a>עריכת בקשות</a></li>
-        <li><a>צפייה בגרף בקשות</a></li>
-        <li><a>עריכת חלוקה נוכחית</a></li>
+        <NavLink className="navbar-item is-tab" activeClassName="is-active" to="/students" >הכנסת תלמידים</NavLink>
+        <NavLink className="navbar-item is-tab" activeClassName="is-active" to="/requests" >עריכת בקשות</NavLink>
+        <NavLink className="navbar-item is-tab" activeClassName="is-active" to="/graph" >צפייה בגרף בקשות</NavLink>
+        <NavLink className="navbar-item is-tab" activeClassName="is-active" to="/editing" >עריכת חלוקה נוכחית</NavLink>
       </ul>
     </div>
-
-          /*
-
-        <div style={{direction: 'ltr'}} className="navbar-end">
-          <div className="navbar-item ">
-            <a >
-              Docs
-            </a>
-          </div>
-          <div className="navbar-item">
-            <a className="navbar-link ">
-              Blog
-            </a>
-
-          </div>
-          <div className="navbar-item">
-            <div className="navbar-link">
-              More
-            </div>
-
-          </div>
-
-        </div>
-        */
-
-    );
+  );
 };
 export default Navbar;

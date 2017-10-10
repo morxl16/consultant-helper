@@ -1,41 +1,26 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
+import studentClasses from '../../mocks/studentClasses';
 
 const SideMenu = () => {
   return (
-    <aside className="menu is-pulled-right">
-      <p className="menu-label">
-        General
+    <nav className="panel">
+      <p className="panel-heading">
+        כיתות
       </p>
-      <ul className="menu-list">
-        <li><a>Dashboard</a></li>
-        <li><a>Customers</a></li>
-      </ul>
-      <p className="menu-label">
-        Administration
-      </p>
-      <ul className="menu-list">
-        <li><a>Team Settings</a></li>
-        <li>
-          <a className="is-active">Manage Your Team</a>
-          <ul>
-            <li><a>Members</a></li>
-            <li><a>Plugins</a></li>
-            <li><a>Add a member</a></li>
-          </ul>
-        </li>
-        <li><a>Invitations</a></li>
-        <li><a>Cloud Storage Environment Settings</a></li>
-        <li><a>Authentication</a></li>
-      </ul>
-      <p className="menu-label">
-        Transactions
-      </p>
-      <ul className="menu-list">
-        <li><a>Payments</a></li>
-        <li><a>Transfers</a></li>
-        <li><a>Balance</a></li>
-      </ul>
-    </aside>
+      {
+        studentClasses.map(studentClass => {
+          return (
+            <NavLink key={studentClass} to={`/editing/${studentClass}`} className="panel-block" activeClassName="is-active">
+              <span style={{marginLeft: '5px'}} className="panel-icon">
+                <i className="fa fa-book"></i>
+              </span>
+              {studentClass}
+            </NavLink>
+          );
+        })
+      }
+    </nav>
   );
 }
 
